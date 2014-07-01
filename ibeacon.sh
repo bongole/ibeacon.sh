@@ -3,7 +3,7 @@ UUID="C8BD140A-0A34-4C0C-9933-86F21A5863FF"
 MAJOR=0
 MINOR=0
 MEASURED_POWER=199
-BT_DEV=hci1
+BT_DEV=${1:-hci1}
 
 TMP_UUID=$(echo $UUID|tr -d '-'|sed  's/\(..\)/\1 /g')
 TMP_MAJOR=$(printf '%04X' $MAJOR|sed 's/\(..\)/\1 /g')
